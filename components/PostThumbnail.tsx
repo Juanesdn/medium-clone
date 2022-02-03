@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import React from 'react'
 import { urlFor } from '../sanity'
-import { Post as PostType } from '../typings'
+import { Post } from '../typings'
 
 interface Props {
-  post: PostType
+  post: Post
 }
 
-function Post({ post }: Props) {
+function PostThumbnail({ post }: Props) {
   return (
     <Link href={`/post/${post.slug.current}`}>
       <div className="group cursor-pointer overflow-hidden rounded-lg border">
@@ -34,4 +34,4 @@ function Post({ post }: Props) {
   )
 }
 
-export default Post
+export default PostThumbnail

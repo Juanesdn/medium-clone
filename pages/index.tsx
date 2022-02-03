@@ -1,13 +1,12 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import Post from '../components/Post'
-import { sanityClient, urlFor } from '../sanity'
-import { Post as PostType } from '../typings'
+import PostThumbnail from '../components/PostThumbnail'
+import { sanityClient } from '../sanity'
+import { Post } from '../typings'
 
 interface Props {
-  posts: [PostType]
+  posts: [Post]
 }
 
 export default function Home({ posts }: Props) {
@@ -22,7 +21,7 @@ export default function Home({ posts }: Props) {
       {/* Posts */}
       <div className="grid grid-cols-1 gap-3 p-2 sm:grid-cols-2 md:gap-6 md:p-6 lg:grid-cols-3">
         {posts.map((post) => (
-          <Post key={post._id} post={post} />
+          <PostThumbnail key={post._id} post={post} />
         ))}
       </div>
     </div>

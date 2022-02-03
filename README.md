@@ -4,8 +4,11 @@ This is a clone of Medium Blog using [Tailwind CSS](https://tailwindcss.com/) [(
 
 ## Usage
 
-To start the application you need to have a .env.local file with the following variables
+To start the application you need to have the following environment variables (or .env.local file)
 * NEXT_PUBLIC_SANITY_DATASET -> Sanity dataset name, by default its set to 'production'
 * NEXT_PUBLIC_SANITY_PROJECT_ID -> Sanity Project ID
+* SANITY_API_TOKEN -> Sanity Project API Token
 
 Once you have this set up, you should be able to connext NextJS with Sanity.
+
+The posts are created via Sanity
